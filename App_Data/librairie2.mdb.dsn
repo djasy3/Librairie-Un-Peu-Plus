@@ -1,0 +1,15 @@
+[ODBC]
+DRIVER=Microsoft Access dBASE Driver (*.dbf, *.ndx, *.mdx)
+UID=admin
+UserCommitSync=Yes
+Threads=3
+Statistics=0
+SafeTransactions=0
+PageTimeout=600
+MaxScanRows=8
+MaxBufferSize=2048
+FIL=dBASE 5.0
+DriverId=533
+Deleted=1
+DefaultDir=C:\Users\Arthson mukeya\Documents\Visual Studio 2012\WebSites\librairieunpeuplus\App_Data
+CollatingSequence=ASCII

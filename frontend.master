@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="frontend.master.cs" Inherits="frontend" %>
+
+<%@ Register Src="~/Controles_Utilisateurs/UserInfo.ascx" TagPrefix="uc2" TagName="UserInfo" %>
+
+
+<%@ Register src="Controles_Utilisateurs/SommaireShoppingCart.ascx" tagname="SommaireShoppingCart" tagprefix="uc1" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="App_Themes/Design/Design.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/x-con" href="Images/lup_icone.png"/>
+</head>
+<body>
+    <div id="vue_page">
+        <form id="m_formLogin" runat="server">
+        <header>
+            <nav id="connexion">
+                <uc2:UserInfo runat="server" ID="UserInfo" />
+            </nav>
+            <asp:HyperLink ID="m_logo" runat="server" ImageUrl="~/Images/lup_logo_final2.png" NavigateUrl="~/index.aspx" ToolTip="Acceuille"/>
+            <nav id="pannier">
+                <uc1:SommaireShoppingCart ID="SommaireShoppingCart1" runat="server" />
+            </nav>
+            <span id="defilement"><MARQUEE SCROLLDELAY="150">Pour ajouter les livres dans le pannier, veuillez cliquer sur description!!!</MARQUEE></span>
+        </header>
+            <nav id="menu">
+                <ul>
+                    <li><asp:HyperLink ID="index" runat="server" NavigateUrl="~/index.aspx" Text="Accueil"/></li>
+                    <li><asp:HyperLink ID="info"  runat="server" NavigateUrl="~/Informatique/informatiques.aspx" Text="Informatique"/></li>
+                    <li><asp:HyperLink ID="techno" runat="server" NavigateUrl="~/Technologies/technologies.aspx" Text="Technologie"/></li>
+                    <li><asp:HyperLink ID="affaire" runat="server" NavigateUrl="~/Affaires/affaires.aspx" Text="Affaires"/></li>
+                    <li><asp:HyperLink ID="tout" runat="server" NavigateUrl="~/liste_livres.aspx" Text="Liste des livres"/></li>
+                </ul>
+            </nav>
+        <section id="m_mainContent">
+            <span>Vous êtes sur la page &nbsp;</span><asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath><br /><br />
+            <asp:ContentPlaceHolder ID="m_mainContainer" runat="server">
+                <!-- Containeur principale de toutes les pages filles -->
+            </asp:ContentPlaceHolder>
+        </section>
+        <!--</nav>-->
+        <footer>
+            <p>Devélopper par Arthson et Idriss &copy;2013</p>
+            <nav id="pied_de_page">
+                <ul>
+                    <li><a href="#">Nous contacter</a></li>
+                    <li><a href="#">Liens vers d'autres librairie</a></li>
+                    <li><a href="#">A propros de nous</a></li>
+                    <li><a href="#">Signaler un bug</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </form>
+    </div>
+</body>
+</html>

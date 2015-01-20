@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/" title="Accueil" description="Page d'accueil" >
+    <siteMapNode url="~/index.aspx" title="Accueil" description="Page d'accueil" />
+    <siteMapNode url="~/Informatique/informatiques.aspx" title="Informatiques" description="Rayon informatique">
+      <siteMapNode url="~/Informatique/details.aspx" title="Détails du livre" description="détails sur votre livre"/>
+    </siteMapNode>
+    <siteMapNode url="~/Technologies/technologies.aspx" title="Technologies" description="Tout sur la technologie" >
+      <siteMapNode url="~/Technologies/details.aspx" title="Détails du livre" description="détails sur votre livre"/>
+    </siteMapNode>
+    <siteMapNode url="~/Affaires/affaires.aspx" title="Affaires" description="Tout sur les Affaires" >
+      <siteMapNode url="~/Affaires/details.aspx" title="Détails du livre" description="détails sur votre livre"/>
+    </siteMapNode>
+    <siteMapNode url="~/liste_livres.aspx" title="Liste des livres" description="Tous les livres">
+      <siteMapNode url="~/Details/details.aspx" title="Détails du livre" description="détails sur votre livre"/>
+      </siteMapNode>
+    <siteMapNode url="~/Connexion/login.aspx" title="Connexion" description="Connexion" />
+    <siteMapNode url="~/Connexion/account.aspx" title="Compte" description="Créer un compte"/>
+    <siteMapNode url="~/Connexion/Profile.aspx" title="Profile" description="Modifier vos informations" roles="Utilisateurs"/>
+    <siteMapNode url="~/Checkout.aspx" title="Check out" description="quitter"/>
+    <siteMapNode url="~/CommandeConfirmee.aspx" title="Confirmer votre commande" description="Confirmer votre commande"/>
+    <siteMapNode url="~/ShoppingCart.aspx" title="Votre pannier" description="votre pannier"/>
+    <siteMapNode url="~/Details/description.aspx" title="Détails du livre" description="détails sur votre livre"/>
+  </siteMapNode>
+</siteMap>

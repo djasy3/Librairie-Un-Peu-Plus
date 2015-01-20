@@ -1,0 +1,277 @@
+﻿body {
+    font-family:Corbel, Gothic,Eras ITC,Calibri,Verdana,Consolas;
+    font-size:16px;
+    background-color: #f1f1e8
+}
+
+header {
+    background-color:#fffffe;
+    width:auto;
+    height:20%;
+    border-radius:3px 4px;
+}
+
+h1 {
+    font-size:20px;
+    padding:0px;
+    margin:0 0 10px 0;
+}
+
+#vue_page {
+    width:70%;
+    margin:auto;
+}
+
+nav {
+}
+    /*inscription et mon compte*/
+    nav#connexion ul {
+        position:relative;
+        display:block;
+        float:right;
+    }
+    nav#connexion li {
+        display:block;
+        float:left;
+        margin:0 0 0 5px;
+        padding-right:2px;
+    }
+        nav#connexion li a {
+            text-decoration:none;
+            padding: 5px 5px;
+            color:#000;
+        }
+            nav#connexion li a:hover,
+            a:focus {
+                text-decoration:underline;
+                background:none;
+            }
+            /*menu*/
+    nav#menu {
+        padding:0;
+        width:100%;
+        background-color:black;
+    }
+        nav#menu ul {
+            margin:0;
+            padding:0;
+            list-style-type:none;
+            width:auto;
+            position:relative;
+            display:block;
+            height:36px;
+            border-bottom:4px solid #336666;
+            border-top:1px solid #C0E2D4;
+        }
+        nav#menu li {
+            display:block;
+            float:left;
+            margin:0;
+            padding:0;
+        }
+        nav#menu li a {
+            float:left;
+            display:block;
+            color:white;
+            /*margin: 0 1px 0 0;*/
+            padding: 12px 20px 5px 20px;
+            text-decoration:none;
+            letter-spacing:1px;
+            background-color:black;/*couleur par défaut de notre menu*/
+        }
+            nav#menu a:hover {
+                background-color:gray;
+            }
+        nav#menu #current a {
+            background-color:gray;
+            border-color:gray;
+        }
+
+.Erreur {
+    color:#f00;
+}
+
+/*début région body*/
+section#m_mainContent {
+    width:93.5%;
+    margin-left:1%;
+    background-color:rgba(228, 224, 224, 0.94);
+    padding:20px;
+}
+    section#m_mainContent a {
+        color:#000000;
+        text-decoration:none;
+    }
+        section#m_mainContent a:visited {
+            color:#000000;
+            text-decoration:none;
+        }
+        section#m_mainContent a:hover {
+            color:#FFA500;
+            text-decoration:underline;
+        }
+/*Fin région body*/
+
+footer {
+    border-top:4px solid #336666;
+    background-color:#000000;
+    width:auto;
+    height:10%;
+    clear:both;
+    color:orangered;
+}
+    footer p {
+        text-align:center;
+    }
+    nav#pied_de_page {
+        text-align:center;
+        padding:0;
+        width:100%;
+        padding-bottom:4px;
+    }
+    nav#pied_de_page ul {
+        margin:0;
+        padding:0;
+        list-style-type:none;
+        width:auto;
+        position:relative;
+        display:block;
+        height:36px;
+    }
+    nav#pied_de_page li {
+        display:block;
+        float:left;
+        margin:0;
+        padding:0;
+    }
+        nav#pied_de_page li a {
+            float:left;
+            display:block;
+            color:orangered;
+            /*margin: 0 1px 0 0;*/
+            padding: 12px 20px 5px 20px;
+            text-decoration:none;
+            letter-spacing:1px;
+            background-color:black;
+        }
+            nav#pied_de_page li a:hover{
+                text-decoration:underline;
+            }
+aside {
+
+}
+
+/*sous-élément du logo*/
+#m_logo{
+    padding-top:2px;
+    display:inline-block;
+}
+    #m_logo a:hover {
+        background-color:none;
+    }
+
+/*début page de login*/
+#m_droite {
+    width:43%;
+    margin-left:20px;
+    text-align:justify;
+    border-style:solid;
+    border-radius:10px;
+    border-width:4px;
+}
+    article#m_droite table {
+        margin-left:10px;
+    }
+        article#m_droite table th {
+           
+        }
+
+#m_gauche {
+    display:inline-block;
+    vertical-align:central;
+    margin-left:30px;
+    width:50%;
+    padding-left:10px;
+    text-align:justify;
+    border-color:orange;
+    border-style:solid;
+    border-radius:10px;
+    border-width:4px;
+}
+    
+article {
+    background-color: #fffffe;
+}
+    article label:hover, label:focus {
+        color:orangered;
+    }
+
+    article table th {
+        font-size:15px;
+        text-align:center;
+    }
+/*Fin page de login*/
+hr {
+    border-color:orangered;
+    border-width:1px;
+}
+#m_affiche {
+    text-align:left;
+    width:100%;
+    
+}
+.col3 {
+        text-align:right;
+}
+/* partie administrative*/
+.UserInfoHead {
+    border:#cc6666 1px solid;
+    background-color:#dc143c;
+    color:#f5f5dc;
+    text-align:center;
+}
+.UserInfoContent {
+    border:#cc6666 1px solid;
+}
+.AdminTitre {
+    font-size:24px;
+    font-weight:bold;
+}
+.Window .Main .Right .AdminHeader {
+    margin: 5px 5px 5px 0px;
+    width:100%;
+}
+.AdminContents {
+    margin:5px 5px 5px 0px;
+    width:900px;
+    float:left;
+}
+.AdminError {
+    color:red;
+}
+.SommaireShoppingCart {
+    border:#336666 2px solid;
+    background-color:snow;
+    }
+
+#pannier {
+    position:relative;
+    bottom:90px;
+    right:-70%;
+}
+#img_index {
+    position:relative;
+    left:5%;
+}
+#defilement {
+    marquee-direction:reverse;
+    marquee-style:slide;
+    marquee-loop:infinite;
+    marquee-speed:slow;
+
+    color:orangered;
+    font-size:16px;
+}
+.btn :hover{
+    color:aqua;
+}

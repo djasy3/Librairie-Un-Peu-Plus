@@ -1,0 +1,98 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Web.Profile;
+using System.Web.Security;
+using System.Data;
+using System.Data.Common;
+using System.Text;
+using SecurityLib;
+
+/// <summary>
+/// Description résumée de CmdLibAccess
+/// </summary>
+/// 
+public class CmdLibAccessInfoDetails
+{
+    //on défini les attributs;
+    private int m_cmdID;
+    private int m_produitID;//numéro du livre
+    private string m_titre;
+    private int m_qte;
+    private double m_coutUnitaire;
+    private string m_itemAsString;//afficher les items sous format de chaine de caractères
+    //propriétés...
+    public double SousTotal
+    {
+        get { return Quantite * CoutUnitaire; }
+    }
+    //
+    public int CmdID
+    {
+        get { return this.m_cmdID; }
+        set { this.m_cmdID = value; }
+    }
+    //
+    public int ProduitID
+    {
+        get { return this.m_produitID; }
+        set { this.m_produitID = value; }
+    }
+    //
+    public string ProduitTitre
+    {
+        get { return this.m_titre; }
+        set { this.m_titre = value; }
+    }
+    //
+    public string ItemAsString
+    {
+        get { return this.m_itemAsString; }
+        set { this.m_itemAsString = value; }
+    }
+    //
+    public int Quantite
+    {
+        get { return this.m_qte; }
+        set { this.m_qte = value; }
+    }
+    //
+    public double CoutUnitaire
+    {
+        get { return this.m_coutUnitaire; }
+        set { this.m_coutUnitaire = value; }
+    }
+    //constructeur
+    public CmdLibAccessInfoDetails(DataRow cmdDetailsLigne)
+    {
+        CmdID = Int32.Parse(cmdDetailsLigne["CmdID"].ToString());
+        ProduitID = Int32.Parse(cmdDetailsLigne["ProduitID"].ToString());
+        ProduitTitre = cmdDetailsLigne["ProduitID"].ToString();
+        Quantite = Int32.Parse(cmdDetailsLigne["Quantite"].ToString());
+        CoutUnitaire = Double.Parse(cmdDetailsLigne["CoutUnitaire"].ToString());
+        //on définit les info des propriétés
+        Refresh();
+    }
+    //
+    public void Refresh()
+    {
+        ItemAsString = Quantite.ToString() + "" + ProduitTitre + ",$" + CoutUnitaire.ToString() + " Chaque, Cout Total $" + SousTotal.ToString();
+    }
+}
+//deuxième classe
+public class CmdLibAccess
+{
+    public static List<CmdLibAccessInfoDetails> GetDetailsCmd(string cmdId)
+    {
+        //on utilise une méthode existante pour le datatable(AccessCommande)
+        DataTable m_donneesDetailsCmd = CommandeAccess.GetDetails(cmdId);
+        //on crée la liste
+        List<CmdLibAccessInfoDetails> detailsCmd = new List<CmdLibAccessInfoDetails>(m_donneesDetailsCmd.Rows.Count);
+        //on parcours la table
+        foreach(DataRow m_detailCmd in m_donneesDetailsCmd.Rows)
+        {
+            detailsCmd.Add(new CmdLibAccessInfoDetails(m_detailCmd));
+        }
+        //on retourne les valeurs ajoutées dans la liste
+        return detailsCmd;
+    }
+}

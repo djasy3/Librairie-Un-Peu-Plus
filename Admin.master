@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+
+<%@ Register Src="~/Controles_Utilisateurs/UserInfo.ascx" TagPrefix="uc1" TagName="UserInfo" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Librairie un peu plus-Administration</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="App_Themes/Design/Design.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="Window">
+        <div class="Main">
+            <div class="Left">
+                <nav><uc1:UserInfo runat="server" ID="UserInfo" /></nav>
+            </div>
+            <div class="Right">
+                <div class="AdminHeader">
+                    <asp:ContentPlaceHolder id="TitrePlaceHolder" runat="server">
+
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div class="AdminContents">
+                <asp:ContentPlaceHolder ID="AdminPlaceHolder" runat="server">
+
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
